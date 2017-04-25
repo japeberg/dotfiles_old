@@ -115,3 +115,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Eigene Aliase
+alias update='sudo apt-get update; sudo apt-get dist-upgrade'
