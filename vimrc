@@ -125,6 +125,4 @@ set cursorline
 au FileType python setl sts=4 sw =4 expandtab
 
 
-" Pathogen-Installer
-execute pathogen#infect()
 
