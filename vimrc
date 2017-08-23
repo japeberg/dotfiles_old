@@ -120,8 +120,11 @@ set number
 " Linie unter aktueller Zeile
 set cursorline
 
-" Länge von Tabs 
-set ts=4
+" Pythonspezifisch
+" Shift Width und tab zu 4 Leerzeichen
+au FileType python setl sts=4 sw =4 expandtab
 
-" Tabulator durch Leerzeichen ersetzen
-set expandtab
+
+" Pathogen-Installer
+execute pathogen#infect()
+
