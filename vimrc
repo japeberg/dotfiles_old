@@ -13,6 +13,8 @@ Plugin 'https://github.com/leafgarland/typescript-vim.git'
 Plugin 'https://github.com/Valloric/YouCompleteMe.git'
 Plugin 'https://github.com/vim-syntastic/syntastic.git'
 Plugin 'https://github.com/chrisbra/csv.vim.git'
+Plugin 'vim-airline/vim-airline'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -169,4 +171,8 @@ let g:syntastic_check_on_wq = 0
 
 " Vollen Pfad anzeigen
 set statusline+=%F
+
+" xmodmap: Caps-Lock zu Escape
+au VimEnter * !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+au VimLeave * !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
 
