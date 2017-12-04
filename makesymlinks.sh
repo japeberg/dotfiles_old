@@ -9,7 +9,7 @@
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
 files="bashrc vimrc"    # list of files/folders to symlink in homedir
-
+i3_config=".config/i3/config"
 ##########
 
 # create dotfiles_old in homedir
@@ -28,20 +28,9 @@ for file in $files; do
     mv ~/.$file ~/dotfiles_old/
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
-
-
-echo "Installing Vundle for vim"
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-echo "...done"
-
-echo "Installing VIM-Plugins with Vundle"
-vim +PluginInstall +qall
-echo "...done"
-
-echo "Compiling YouCompleteMe"
-sudo apt-get install build-essential cmake
-sudo apt-get install python-dev python3-dev
-cd ~/.vim/bundle/YouCompleteMe
-./install.py --clang-completer
-echo "...done"
 done
+
+echo "Moving i3-config from ~ to $olddir"
+mv ~/$i3_config $olddir/i3-config
+echo "Creating symlink to i3-config in home directory."
+ln -s $dir/i3-config ~/$i3_config
