@@ -14,7 +14,7 @@ Plugin 'https://github.com/Valloric/YouCompleteMe.git'
 Plugin 'https://github.com/vim-syntastic/syntastic.git'
 Plugin 'https://github.com/chrisbra/csv.vim.git'
 Plugin 'vim-airline/vim-airline'
-
+Plugin 'https://github.com/mattn/emmet-vim/'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
