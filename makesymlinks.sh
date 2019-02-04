@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bashrc vimrc"    # list of files/folders to symlink in homedir
+files="bashrc vimrc config/fish/fish_variables config/i3/config config/i3/i3status.conf"    # list of files/folders to symlink in homedir
 i3_config=".config/i3"
 ##########
 
@@ -29,10 +29,3 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
-
-echo "Moving i3-config from ~ to $olddir"
-mv ~/$i3_config/config $olddir/i3-config
-mv ~/$i3_config/i3status.conf $olddir/i3status.conf
-echo "Creating symlink to i3-config in home directory."
-ln -s $dir/i3-config ~/$i3_config/config
-ln -s $dir/i3status.conf ~/$i3_config/i3status.conf
