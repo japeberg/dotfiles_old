@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bashrc vimrc config/fish/fish_variables config/i3/config config/i3/i3status.conf"    # list of files/folders to symlink in homedir
+files="bashrc vimrc config/fish/fish_variables config/i3/config config/i3/i3status.conf config/fish/functions/fish_prompt.fish"    # list of files/folders to symlink in homedir
 i3_config=".config/i3"
 ##########
 
